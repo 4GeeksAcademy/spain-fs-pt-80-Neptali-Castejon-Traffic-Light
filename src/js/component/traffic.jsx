@@ -1,19 +1,14 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-export const TrafficLight = () => {
+export const Traffic = ({ lightsData }) => {
     
     const [activeColor, setActiveColor] = useState('');
 
-    const lights = [
-        { color: 'red', bgColor: 'bg-danger', icon: 'fa-regular fa-hand' },
-        { color: 'yellow', bgColor: 'bg-warning', icon: 'fa fa-exclamation-triangle semaphore__icon--adjusted' },
-        { color: 'green', bgColor: 'bg-success', icon: 'fa-brands fa-golang' }
-    ];
-
     return (
         <div className="d-flex justify-content-center align-items-center vh-100">
-            <div className="semaphore">
-                {lights.map((light, index) => (
+            <div className="semaphore gap-3">
+                {lightsData.map((light, index) => (
                     <div
                         key={index}
                         onClick={() => setActiveColor(light.color)}
@@ -25,4 +20,14 @@ export const TrafficLight = () => {
             </div>
         </div>
     );
+};
+
+Traffic.propTypes = {
+    lightsData: PropTypes.arrayOf(
+        PropTypes.shape({
+            color: PropTypes.string.isRequired,
+            bgColor: PropTypes.string.isRequired,
+            icon: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 };

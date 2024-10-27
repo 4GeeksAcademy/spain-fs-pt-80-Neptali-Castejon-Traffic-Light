@@ -1,10 +1,11 @@
 import React from "react";
 import "../../styles/index.css";
-import { TrafficLight } from "./traffic";
+import { Traffic } from "./traffic";
+import { lightsData } from "../data";
 
 const Home = () => {
     return (
-        <TrafficLight />
+        <Traffic lightsData={lightsData} />
     );
 };
 

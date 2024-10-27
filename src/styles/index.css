@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: space-around;
   width: 140px;
-  height: 380px;
+  height: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
@@ -43,7 +43,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: rgba(255, 255, 255, 0.8); */
   color: rgba(0, 0, 0, 0.8);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -53,7 +52,11 @@
   margin-top: -8px;
 }
 
+.my-custom-icon {
+  margin-top: -8px;
+}
+
 .my-custom-text {
-  font-size: 55px;
+  color: #09e981;
 }
   
